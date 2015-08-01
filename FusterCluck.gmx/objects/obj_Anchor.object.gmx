@@ -59,9 +59,9 @@ shakecount = 1;
 if(goingup = true){image_xscale*=inc; image_yscale*=inc;}
 if(goingup = false){if(image_xscale &gt; 1){image_xscale/=inc; image_yscale/=inc;}}
 
-if(speed&lt;.5){
+if(speed&lt;1){
 
-if(shakecount &gt; 0){Control.shake+=6; shakecount-=1;obj_Enemy.alert = 1;}
+if(shakecount &gt; 0){Control.shake+=6; shakecount-=1;if(instance_exists(obj_Enemy)){obj_Enemy.alert = 1;}}
 
 }
 

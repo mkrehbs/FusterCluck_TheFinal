@@ -31,6 +31,8 @@
       <sprite>sprites\spr_EnemyD</sprite>
       <sprite>sprites\spr_EnemyL</sprite>
     </sprites>
+    <sprite>sprites\spr_Egg</sprite>
+    <sprite>sprites\spr_Key</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Grass</background>
@@ -46,6 +48,7 @@
     <script>scripts\scr_Set.gml</script>
     <script>scripts\scr_WhatProj.gml</script>
     <script>scripts\scr_WhatThrow.gml</script>
+    <script>scripts\scr_GameOver.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_Template</object>

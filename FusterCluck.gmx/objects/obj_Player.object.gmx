@@ -279,6 +279,8 @@ if (facing == 'D') {
           <argument>
             <kind>1</kind>
             <string>///Matt
+
+if(hp &lt; 1){scr_GameOver();}
 </string>
           </argument>
         </arguments>

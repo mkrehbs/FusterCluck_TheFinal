@@ -81,7 +81,7 @@ if(image_angle &gt; finalangle || image_angle &lt; startingangle ){goingleft*=-1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_Enemy.alert = 1;
+            <string>if(instance_exists(obj_Enemy)){obj_Enemy.alert = 1;}
 </string>
           </argument>
         </arguments>

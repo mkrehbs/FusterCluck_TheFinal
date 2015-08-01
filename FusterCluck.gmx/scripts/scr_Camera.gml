@@ -1,6 +1,6 @@
 switch(argument0){
 
-case 1:
+default:
 viewdist = Control.viewdist
 viewx2 = Control.viewx2;
 viewy2 = Control.viewy2;
