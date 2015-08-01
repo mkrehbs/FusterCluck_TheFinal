@@ -6,6 +6,14 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="Projectiles">
+      <sprite>sprites\spr_Anchor</sprite>
+      <sprite>sprites\spr_Brick</sprite>
+    </sprites>
+    <sprites name="Items">
+      <sprite>sprites\spr_Egg</sprite>
+      <sprite>sprites\spr_Key</sprite>
+    </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_Player</sprite>
       <sprite>sprites\spr_PlayerW</sprite>
@@ -19,11 +27,8 @@
     </sprites>
     <sprite>sprites\spr_Gun</sprite>
     <sprite>sprites\spr_Enemy</sprite>
-    <sprite>sprites\spr_Barrier</sprite>
     <sprite>sprites\spr_LOS</sprite>
     <sprite>sprites\spr_Grass</sprite>
-    <sprite>sprites\spr_HaybaleTall</sprite>
-    <sprite>sprites\spr_HaybaleLong</sprite>
     <sprite>sprites\spr_tallBarrier</sprite>
     <sprites name="Enemy">
       <sprite>sprites\spr_EnemyU</sprite>
@@ -31,8 +36,17 @@
       <sprite>sprites\spr_EnemyD</sprite>
       <sprite>sprites\spr_EnemyL</sprite>
     </sprites>
-    <sprite>sprites\spr_Egg</sprite>
-    <sprite>sprites\spr_Key</sprite>
+    <sprites name="Barrier">
+      <sprites name="Outside Coop">
+        <sprite>sprites\spr_fenceRightDiag</sprite>
+        <sprite>sprites\spr_fenceRight</sprite>
+        <sprite>sprites\spr_fenceLeft</sprite>
+        <sprite>sprites\spr_fenceLeftDiag</sprite>
+        <sprite>sprites\spr_Barrier</sprite>
+        <sprite>sprites\spr_HaybaleLong</sprite>
+        <sprite>sprites\sprite27</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Grass</background>
@@ -81,7 +95,6 @@
     </objects>
     <objects name="Barriers">
       <object>objects\obj_Barrier</object>
-      <object>objects\obj_tallBale</object>
       <object>objects\obj_longBale</object>
     </objects>
   </objects>
@@ -89,6 +102,7 @@
     <room>rooms\Colton</room>
     <room>rooms\rm_LevelOne</room>
     <room>rooms\rm_Init</room>
+    <room>rooms\room3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
