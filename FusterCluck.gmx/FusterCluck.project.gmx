@@ -9,6 +9,10 @@
     <sprites name="Projectiles">
       <sprite>sprites\spr_Anchor</sprite>
       <sprite>sprites\spr_Brick</sprite>
+      <sprite>sprites\spr_Bowling</sprite>
+      <sprite>sprites\spr_Gloves</sprite>
+      <sprite>sprites\spr_Slipper</sprite>
+      <sprite>sprites\spr_Pizza</sprite>
     </sprites>
     <sprites name="Items">
       <sprite>sprites\spr_Egg</sprite>
@@ -45,6 +49,7 @@
         <sprite>sprites\spr_Barrier</sprite>
         <sprite>sprites\spr_HaybaleLong</sprite>
         <sprite>sprites\sprite27</sprite>
+        <sprite>sprites\spr_fenceMid</sprite>
       </sprites>
     </sprites>
   </sprites>
