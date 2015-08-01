@@ -30,6 +30,8 @@
 goingup = true;
 
 inc = 1.2
+
+shakecount = 1;
 </string>
           </argument>
         </arguments>
@@ -56,6 +58,12 @@ inc = 1.2
 
 if(goingup = true){image_xscale*=inc; image_yscale*=inc;}
 if(goingup = false){if(image_xscale &gt; 1){image_xscale/=inc; image_yscale/=inc;}}
+
+if(speed&lt;.5){
+
+if(shakecount &gt; 0){Control.shake+=6; shakecount-=1;obj_Enemy.alert = 1;}
+
+}
 
 
 

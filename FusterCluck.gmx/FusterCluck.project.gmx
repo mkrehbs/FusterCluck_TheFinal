@@ -83,8 +83,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_LevelOne</room>
     <room>rooms\Colton</room>
+    <room>rooms\rm_LevelOne</room>
     <room>rooms\rm_Init</room>
   </rooms>
   <help>
