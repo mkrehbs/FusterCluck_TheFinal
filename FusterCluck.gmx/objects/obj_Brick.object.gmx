@@ -31,7 +31,32 @@ goingup = true;
 
 inc = 1.05;
 
+speedy = 25;
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -56,8 +81,9 @@ inc = 1.05;
             <kind>1</kind>
             <string>if(speed &gt; 1){image_angle+=30;}
 
-speed = 25;
 
+
+if(speed &lt; 1){speed = 0;}else{speed = speedy;}
 /*
 if(image_xscale &gt; 2){goingup = false;}
 
@@ -87,8 +113,33 @@ if(image_xscale &lt;= 1){friction = 1;}
           <argument>
             <kind>1</kind>
             <string>move_bounce_solid(true);
-friction *= 8;
-
+friction = .95;
+speedy = 1;
+alarm[0] = 10;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Enemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>other.hp-=10;
+instance_destroy();
 </string>
           </argument>
         </arguments>
