@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Colton
-projectile = choose(2)//choose(1,1,1,1,1,2,2,2,2,3);
-throwprojectile = choose(3);
+projectile = choose(1)//choose(1,1,1,1,1,2,2,2,2,3);
+throwprojectile = choose(1);
 canshoot = true;
 canthrow = true;
 </string>

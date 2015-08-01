@@ -193,7 +193,7 @@ if (alert == 0) {
 if (alert == 1) {
     path_start(Path,5,"",1);
     }
-}
+}else{speed = 0;}
 
 </string>
           </argument>
