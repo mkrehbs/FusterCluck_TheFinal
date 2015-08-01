@@ -101,13 +101,18 @@
     <objects name="Barriers">
       <object>objects\obj_Barrier</object>
       <object>objects\obj_longBale</object>
+      <object>objects\obj_fenceRightDiag</object>
+      <object>objects\obj_fenceLeftDiag</object>
+      <object>objects\obj_fenceRight</object>
+      <object>objects\obj_fenceLeft</object>
+      <object>objects\obj_fenceMid</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room3</room>
     <room>rooms\Colton</room>
     <room>rooms\rm_LevelOne</room>
     <room>rooms\rm_Init</room>
-    <room>rooms\room3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
