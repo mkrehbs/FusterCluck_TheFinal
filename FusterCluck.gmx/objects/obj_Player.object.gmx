@@ -131,6 +131,8 @@ facing = 'N';
             <string>///Colton
 alarm[1] = 30;
 slide = false;
+if (sprite_index != spr_PlayerD) {/*sprite_index = spr_PlayerD;*/}
+    
 
 </string>
           </argument>
@@ -157,6 +159,9 @@ slide = false;
             <string>///Colton
 //show_debug_message(haskey);
 //alarm 1 being above 1 pretty much means "slide = true"
+
+dir = direction;
+
 if (slide == false) {
 
     if (keyboard_check(ord('W')))  {
@@ -221,10 +226,30 @@ if (slide == false) {
     if(alarm[1] &lt; 1){if (keyboard_check(vk_space)){slide = true; alarm[0] = 10;}}
 }
 
-if(slide = true){friction = 0.25; maxspeed = 10; speed = 10;}
+if(slide == true){friction = 0.25; maxspeed = 10; speed = 10;}
 else{friction = 0.8; maxspeed = 4;}
 
-if(keyboard_check(vk_shift) &amp;&amp; slide = false){maxspeed = 6.5;}
+if(keyboard_check(vk_shift) &amp;&amp; slide == false)
+    {   
+        maxspeed = 6.5;
+        
+        if ((dir &gt; 45) &amp;&amp; (dir &lt;= 135))
+        {
+            //sprite_index = spr_PlayerDiveUp;
+        }
+        if ((dir &gt; 135) &amp;&amp; (dir &lt;= 225))
+        {
+            //sprite_index = spr_PlayerDiveLeft;
+        }
+        if ((dir &gt; 225) &amp;&amp; (dir &lt;= 315))
+        {
+            //sprite_index = spr_PlayerDiveDown;
+        }
+        if ((315 &lt; dir &lt;= 0) &amp;&amp; (0 &lt; dir &lt;= 45))
+        {
+            //sprite_index = spr_PlayerDiveRight;
+        } 
+    }
 
 if (speed &gt; maxspeed) {
     speed = maxspeed;
