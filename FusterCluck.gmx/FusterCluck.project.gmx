@@ -17,6 +17,7 @@
     <sprites name="Items">
       <sprite>sprites\spr_Egg</sprite>
       <sprite>sprites\spr_Key</sprite>
+      <sprite>sprites\spr_Hole</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_Player</sprite>
@@ -39,6 +40,8 @@
       <sprite>sprites\spr_EnemyR</sprite>
       <sprite>sprites\spr_EnemyD</sprite>
       <sprite>sprites\spr_EnemyL</sprite>
+      <sprite>sprites\spr_Camera</sprite>
+      <sprite>sprites\spr_Laser</sprite>
     </sprites>
     <sprites name="Barrier">
       <sprites name="Outside Coop">
