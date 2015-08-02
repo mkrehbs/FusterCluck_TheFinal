@@ -149,6 +149,7 @@ obj_Player.image_yscale *=.95;
 alarm[0] = 15;
 image_blend = c_black;
 with(obj_Barrier){{instance_destroy();}}
+obj_Player.depth = -15;
 </string>
           </argument>
         </arguments>

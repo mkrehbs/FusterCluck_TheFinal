@@ -166,8 +166,6 @@
     <object>objects\obj_PatrolPoint</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room4</room>
-    <room>rooms\room3</room>
     <room>rooms\Colton</room>
     <room>rooms\rm_LevelOne</room>
     <room>rooms\rm_Init</room>
