@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>projdamage = 1
+            <string>projdamage = 1;
+
+stuckto = -1;
 </string>
           </argument>
         </arguments>
@@ -48,7 +50,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle+=30;
+            <string>if(speed &gt; 1){ image_angle+=30;}
+
+
 </string>
           </argument>
         </arguments>
@@ -71,7 +75,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>if(other.pizzad == false){other.pizzad = true;
+other.pizzadangle = image_angle;}
+other.hurt = true;
+instance_destroy();
 </string>
           </argument>
         </arguments>

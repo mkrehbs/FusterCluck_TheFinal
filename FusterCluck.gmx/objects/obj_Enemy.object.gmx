@@ -27,6 +27,19 @@
             <kind>1</kind>
             <string>///Colton
 canmove = true;
+pizzad = false;
+pizzadangle = 0;
+hurt = false;
+
+
+
+//ai edits
+
+
+wtf = 600;
+moving = false;
+pointofinterestx = -1;
+pointofinteresty = -1;
 </string>
           </argument>
         </arguments>
@@ -67,6 +80,31 @@ Patrol = path_add();
 //mp_grid_add_instances(Grid, obj_Barrier, 1);
 //mp_grid_path(Grid, Path, x, y, obj_Player.x, obj_Player.y, 1);
 //path_start(Path,2,"",1);
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>alert = 1;
 </string>
           </argument>
         </arguments>
@@ -114,6 +152,7 @@ Patrol = path_add();
             <kind>1</kind>
             <string>///Colton
 if(hp&lt;1){instance_destroy();}
+if(hurt){hurt = false;}
 </string>
           </argument>
         </arguments>
@@ -140,9 +179,9 @@ if(canmove){
 
 dir = direction;
 
-image_speed=.35;
+if(moving){image_speed = 0.35}else{image_speed = 0;}
 
-show_debug_message(dir);
+//show_debug_message(dir);
 
 //if (dir &gt; 315) &amp;&amp; (dir &lt;= 45)
 if ((315 &lt; dir &lt;= 0) &amp;&amp; (0 &lt; dir &lt;= 45))
@@ -177,10 +216,13 @@ if (dir &gt; 225) &amp;&amp; (dir &lt;= 315)
     }
 }
 
+
+/*
+
 patrolx = xstart;
 patroly = ystart;
 
-show_debug_message(patroly);
+//show_debug_message(patroly);
 
 mp_grid_add_instances(Grid, obj_Barrier, 1);
 mp_grid_path(Grid, Path, x, y, obj_Player.x, obj_Player.y, 1);
@@ -192,8 +234,17 @@ if (alert == 0) {
 
 if (alert == 1) {
     path_start(Path,5,"",1);
-    }
-}else{speed = 0;}
+
+        } 
+        */
+        
+                             if(alert == 0){moving = false;}
+     /*run at the player*/   if(alert == 1){moving = true; pointofinterestx = obj_Player.x; pointofinteresty = obj_Player.y; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
+     /*patrol*/              if(alert == 2){moving = true; pointofinterestx = obj_Player.x; pointofinteresty = obj_Player.y; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
+     /*investigate*/         if(alert == 3){alarm[1] = wtf; moving = true; mp_potential_step(pointofinterestx,pointofinteresty,5,0);if(point_distance(x,y,pointofinterestx,pointofinteresty) &lt; 30){alert = 0;}}
+                             
+        
+} else{image_speed = 0;}
 
 </string>
           </argument>
@@ -220,6 +271,31 @@ if (alert == 1) {
             <string>with(obj_Player){
 hp-=1;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+if(pizzad == true){draw_sprite_ext(spr_Pizza,0,x,y-5,1,1,pizzadangle,c_white,1)}
+if(hurt == true){image_blend = c_red};else{image_blend = c_white;}
 </string>
           </argument>
         </arguments>
