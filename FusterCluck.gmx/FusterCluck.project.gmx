@@ -72,6 +72,10 @@
           <sprite>sprites\spr_wood_diag_left</sprite>
           <sprite>sprites\spr_wood_corner_right</sprite>
           <sprite>sprites\spr_wood_corner_left</sprite>
+          <sprite>sprites\spr_new_front_center</sprite>
+          <sprite>sprites\spr_new_front_center_border_left</sprite>
+          <sprite>sprites\spr_new_wood_front_center_border_right</sprite>
+          <sprite>sprites\spr_new_wood_front_center_border_top</sprite>
         </sprites>
         <sprites name="Fence">
           <sprite>sprites\spr_fenceRightDiag</sprite>
