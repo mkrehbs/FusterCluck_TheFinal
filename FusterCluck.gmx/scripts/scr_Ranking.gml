@@ -4,4 +4,3 @@ rating[2] = "HOBBYIST DOG KILLER";
 rating[3] = "PRO DOG KILLER";
 rating[4] = "SNEAK HERO";
 rating[5] = "MAJOR DOOF";
-

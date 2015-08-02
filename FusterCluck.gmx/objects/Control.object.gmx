@@ -43,9 +43,6 @@ viewy = 0;
 viewx2 = 0;
 viewy2 = 0;
 shake = 0;
-
-//dialogue
-scr_Dialogue();
 </string>
           </argument>
         </arguments>
