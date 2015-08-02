@@ -49,7 +49,8 @@
       <sprite>sprites\spr_EnemyD</sprite>
       <sprite>sprites\spr_EnemyL</sprite>
       <sprite>sprites\spr_DCamera</sprite>
-      <sprite>sprites\spr_Laser</sprite>
+      <sprite>sprites\spr_LaserX</sprite>
+      <sprite>sprites\spr_LaserY</sprite>
       <sprite>sprites\spr_UCamera</sprite>
       <sprite>sprites\spr_LCamera</sprite>
       <sprite>sprites\spr_RCamera</sprite>
@@ -99,6 +100,7 @@
       <sprite>sprites\spr_FriendR</sprite>
     </sprites>
     <sprite>sprites\spr_HayFloor</sprite>
+    <sprite>sprites\sprite74</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Grass</background>
