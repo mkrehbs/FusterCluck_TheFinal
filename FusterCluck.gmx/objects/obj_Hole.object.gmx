@@ -147,7 +147,7 @@ obj_Player.image_yscale *=.95;
             <kind>1</kind>
             <string>transition = true;
 alarm[0] = 15;
-
+image_blend = c_black;
 with(obj_Barrier){{instance_destroy();}}
 </string>
           </argument>
