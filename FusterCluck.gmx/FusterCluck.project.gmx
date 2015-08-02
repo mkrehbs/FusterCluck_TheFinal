@@ -18,6 +18,8 @@
       <sprite>sprites\spr_Egg</sprite>
       <sprite>sprites\spr_Key</sprite>
       <sprite>sprites\spr_Hole</sprite>
+      <sprite>sprites\spr_weightSensor</sprite>
+      <sprite>sprites\spr_depressedSensor</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_Player</sprite>
@@ -32,7 +34,10 @@
     </sprites>
     <sprite>sprites\spr_Gun</sprite>
     <sprite>sprites\spr_Enemy</sprite>
-    <sprite>sprites\spr_LOS</sprite>
+    <sprite>sprites\spr_LOS_R</sprite>
+    <sprite>sprites\spr_LOS_U</sprite>
+    <sprite>sprites\spr_LOS_L</sprite>
+    <sprite>sprites\spr_LOS_D</sprite>
     <sprite>sprites\spr_grass1</sprite>
     <sprite>sprites\spr_tallBarrier</sprite>
     <sprites name="Enemy">
@@ -110,12 +115,17 @@
     <object>objects\obj_WeightSensor</object>
     <object>objects\obj_Door</object>
     <object>objects\obj_DSecurityCam</object>
-    <object>objects\object42</object>
+    <object>objects\obj_RSecurityCam</object>
+    <object>objects\obj_USecurityCam</object>
+    <object>objects\obj_LSecurityCam</object>
     <object>objects\obj_Text</object>
     <object>objects\obj_tallBarrier</object>
     <object>objects\obj_LaserSensorx</object>
     <object>objects\obj_LaserSensory</object>
-    <object>objects\obj_LOS</object>
+    <object>objects\obj_LOS_L</object>
+    <object>objects\obj_LOS_U</object>
+    <object>objects\obj_LOS_D</object>
+    <object>objects\obj_LOS_R</object>
     <objects name="Projectiles">
       <object>objects\obj_Projectile</object>
       <objects name="Shot">
@@ -154,8 +164,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room4</room>
-    <room>rooms\Colton</room>
     <room>rooms\room3</room>
+    <room>rooms\Colton</room>
     <room>rooms\rm_LevelOne</room>
     <room>rooms\rm_Init</room>
   </rooms>

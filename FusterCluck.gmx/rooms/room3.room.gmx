@@ -494,6 +494,11 @@
     <instance objName="obj_wood_front_center" x="416" y="192" name="inst_0E9B247A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wood_front_center" x="448" y="192" name="inst_973FDE9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wood_front_center" x="480" y="192" name="inst_3AEEBA1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_WeightSensor" x="736" y="352" name="inst_933A142E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_WeightSensor" x="864" y="352" name="inst_65061B3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Key" x="752" y="366" name="inst_B21C14BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Key" x="704" y="256" name="inst_4920235F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Enemy" x="864" y="192" name="inst_6DE3B015" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
