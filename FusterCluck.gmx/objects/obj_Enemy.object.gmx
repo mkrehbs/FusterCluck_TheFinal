@@ -115,6 +115,8 @@ if(!awayhome){pointofinterestx = home1; pointofinteresty = home2;}
 if(alert == 2 &amp;&amp; distance_to_point(pointofinterestx,pointofinteresty) == 0){
 awayhome*=-1;
 }
+
+if(collision_line(x,y,obj_Player.x,obj_Player.y,obj_Player,0,0) &gt; 0 &amp;&amp; distance_to_object(obj_Player) &lt; 100){alert = 1;}
 </string>
           </argument>
         </arguments>
