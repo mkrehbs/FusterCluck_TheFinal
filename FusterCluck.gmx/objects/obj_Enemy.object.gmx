@@ -38,8 +38,6 @@ hurt = false;
 
 wtf = 600;
 moving = false;
-pointofinterestx = -1;
-pointofinteresty = -1;
 </string>
           </argument>
         </arguments>
@@ -63,7 +61,9 @@ pointofinteresty = -1;
             <string>///Matt
 hp = 2;
 
-alert = 0;
+
+if(instance_exists(obj_PatrolPoint)){pointofinterestx = instance_nearest(x,y,obj_PatrolPoint).x; pointofinteresty = instance_nearest(x,y,obj_PatrolPoint).y; alert = 2;}else{pointofinterestx = -1; pointofinteresty = -1; alert = 0;}
+instance_create(x,y,obj_PatrolPoint);
 
 dir = 0;
 
@@ -240,7 +240,7 @@ if (alert == 1) {
         
                              if(alert == 0){moving = false;}
      /*run at the player*/   if(alert == 1){moving = true; pointofinterestx = obj_Player.x; pointofinteresty = obj_Player.y; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
-     /*patrol*/              if(alert == 2){moving = true; pointofinterestx = obj_Player.x; pointofinteresty = obj_Player.y; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
+     /*patrol*/              if(alert == 2){moving = true; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
      /*investigate*/         if(alert == 3){alarm[1] = wtf; moving = true; mp_potential_step(pointofinterestx,pointofinteresty,5,0);if(point_distance(x,y,pointofinterestx,pointofinteresty) &lt; 30){alert = 0;}}
                              
         
