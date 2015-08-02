@@ -41,7 +41,7 @@
       <sprite>sprites\spr_EnemyD</sprite>
       <sprite>sprites\spr_EnemyL</sprite>
       <sprite>sprites\spr_DCamera</sprite>
-      <sprite>sprites\spr_RLaser</sprite>
+      <sprite>sprites\spr_Laser</sprite>
       <sprite>sprites\spr_UCamera</sprite>
       <sprite>sprites\spr_LCamera</sprite>
       <sprite>sprites\spr_RCamera</sprite>
@@ -113,7 +113,8 @@
     <object>objects\object42</object>
     <object>objects\obj_Text</object>
     <object>objects\obj_tallBarrier</object>
-    <object>objects\obj_LaserSensor</object>
+    <object>objects\obj_LaserSensorx</object>
+    <object>objects\obj_LaserSensory</object>
     <object>objects\obj_LOS</object>
     <objects name="Projectiles">
       <object>objects\obj_Projectile</object>
@@ -152,6 +153,7 @@
     <object>objects\obj_PatrolPoint</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room4</room>
     <room>rooms\Colton</room>
     <room>rooms\room3</room>
     <room>rooms\rm_LevelOne</room>
