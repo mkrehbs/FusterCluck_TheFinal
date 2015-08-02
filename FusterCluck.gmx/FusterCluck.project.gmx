@@ -79,7 +79,6 @@
     <path>paths\Pth_square</path>
   </paths>
   <scripts name="scripts">
-    <script>scripts\scr_Dialogue.gml</script>
     <script>scripts\scr_Camera.gml</script>
     <script>scripts\scr_Console.gml</script>
     <script>scripts\scr_NewGun.gml</script>
@@ -87,6 +86,11 @@
     <script>scripts\scr_WhatProj.gml</script>
     <script>scripts\scr_WhatThrow.gml</script>
     <script>scripts\scr_GameOver.gml</script>
+    <scripts name="Dialogue">
+      <script>scripts\scr_Colonel.gml</script>
+      <script>scripts\scr_Friend.gml</script>
+      <script>scripts\scr_Ranking.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_Template</object>
