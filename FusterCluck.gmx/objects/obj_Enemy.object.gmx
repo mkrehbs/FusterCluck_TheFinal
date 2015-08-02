@@ -109,6 +109,8 @@ Patrol = path_add();
 if(hp&lt;1){instance_destroy();}
 if(hurt){hurt = false;}
 
+show_debug_message(alert);
+
 if(awayhome){pointofinterestx = away1; pointofinteresty = away2;}
 if(!awayhome){pointofinterestx = home1; pointofinteresty = home2;}
 
