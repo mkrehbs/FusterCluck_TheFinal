@@ -20,6 +20,9 @@
       <sprite>sprites\spr_Hole</sprite>
       <sprite>sprites\spr_weightSensor</sprite>
       <sprite>sprites\spr_depressedSensor</sprite>
+      <sprites name="spr_Door">
+        <sprite>sprites\spr_Door</sprite>
+      </sprites>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_Player</sprite>
@@ -168,6 +171,7 @@
     <room>rooms\Colton</room>
     <room>rooms\rm_LevelOne</room>
     <room>rooms\rm_Init</room>
+    <room>rooms\level1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
