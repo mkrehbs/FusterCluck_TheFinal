@@ -109,7 +109,8 @@
     <object>objects\obj_Hole</object>
     <object>objects\obj_WeightSensor</object>
     <object>objects\obj_Door</object>
-    <object>objects\obj_SecurityCam</object>
+    <object>objects\obj_DSecurityCam</object>
+    <object>objects\object42</object>
     <object>objects\obj_Text</object>
     <object>objects\obj_tallBarrier</object>
     <object>objects\obj_LaserSensor</object>
