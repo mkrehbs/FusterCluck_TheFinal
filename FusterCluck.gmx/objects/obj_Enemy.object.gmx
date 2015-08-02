@@ -36,7 +36,7 @@ hurt = false;
 //ai edits
 
 
-wtf = 600;
+wtf = 10;
 moving = false;
 </string>
           </argument>
@@ -104,7 +104,7 @@ Patrol = path_add();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alert = 1;
+            <string>alert = 2;
 </string>
           </argument>
         </arguments>
@@ -153,6 +153,16 @@ Patrol = path_add();
             <string>///Colton
 if(hp&lt;1){instance_destroy();}
 if(hurt){hurt = false;}
+
+if(alert == 2 &amp;&amp; distance_to_point(pointofinterestx,pointofinteresty) == 0){
+
+alert = 0;
+with(instance_place(pointofinterestx,pointofinteresty,obj_PatrolPoint)){instance_destroy();}
+pointofinterestx = instance_nearest(x,y,obj_PatrolPoint).x; pointofinteresty = instance_nearest(x,y,obj_PatrolPoint).y;
+instance_create(x,y,obj_PatrolPoint);
+alert = 2;
+
+}
 </string>
           </argument>
         </arguments>
@@ -175,13 +185,13 @@ if(hurt){hurt = false;}
             <kind>1</kind>
             <string>///Matt
 
-if(canmove){
+//if(canmove){
 
 dir = direction;
 
 if(moving){image_speed = 0.35}else{image_speed = 0;}
 
-//show_debug_message(dir);
+show_debug_message(alert)//show_debug_message(pointofinterestx);show_debug_message(pointofinteresty);/////////
 
 //if (dir &gt; 315) &amp;&amp; (dir &lt;= 45)
 if ((315 &lt; dir &lt;= 0) &amp;&amp; (0 &lt; dir &lt;= 45))
@@ -239,12 +249,12 @@ if (alert == 1) {
         */
         
                              if(alert == 0){moving = false;}
-     /*run at the player*/   if(alert == 1){moving = true; pointofinterestx = obj_Player.x; pointofinteresty = obj_Player.y; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
+     /*run at the player*/   if(alert == 1){alarm[1] = -1; moving = true; pointofinterestx = obj_Player.x; pointofinteresty = obj_Player.y; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
      /*patrol*/              if(alert == 2){moving = true; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
      /*investigate*/         if(alert == 3){alarm[1] = wtf; moving = true; mp_potential_step(pointofinterestx,pointofinteresty,5,0);if(point_distance(x,y,pointofinterestx,pointofinteresty) &lt; 30){alert = 0;}}
                              
         
-} else{image_speed = 0;}
+//} else{image_speed = 0;}
 
 </string>
           </argument>
