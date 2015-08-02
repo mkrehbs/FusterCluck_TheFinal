@@ -31,8 +31,12 @@ pizzad = false;
 pizzadangle = 0;
 hurt = false;
 
+away1 = instance_nearest(x,y,obj_PatrolPoint).x;
+away2 = instance_nearest(x,y,obj_PatrolPoint).y;
+home1 = xstart;
+home2 = ystart;
 
-awayhome = false;
+awayhome = true;
 
 //ai edits
 
@@ -61,11 +65,7 @@ moving = false;
             <kind>1</kind>
             <string>///Matt
 hp = 2;
-
-
-if(instance_exists(obj_PatrolPoint)){pointofinterestx = instance_nearest(x,y,obj_PatrolPoint).x; pointofinteresty = instance_nearest(x,y,obj_PatrolPoint).y; alert = 2;}else{pointofinterestx = -1; pointofinteresty = -1; alert = 0;}
-instance_create(x,y,obj_PatrolPoint);
-
+alert = 2;
 dir = 0;
 
 //image_angle = direction;
@@ -109,8 +109,11 @@ Patrol = path_add();
 if(hp&lt;1){instance_destroy();}
 if(hurt){hurt = false;}
 
-if(alert == 2 &amp;&amp; distance_to_point(pointofinterestx,pointofinteresty) == 0){
+if(awayhome){pointofinterestx = away1; pointofinteresty = away2;}
+if(!awayhome){pointofinterestx = home1; pointofinteresty = home2;}
 
+if(alert == 2 &amp;&amp; distance_to_point(pointofinterestx,pointofinteresty) == 0){
+awayhome*=-1;
 }
 </string>
           </argument>
@@ -199,7 +202,7 @@ if (alert == 1) {
         
                              if(alert == 0){moving = false;}
      /*run at the player*/   if(alert == 1){alarm[1] = -1; moving = true; pointofinterestx = obj_Player.x; pointofinteresty = obj_Player.y; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
-     /*patrol*/              if(alert == 2){moving = true; mp_potential_step(pointofinterestx,pointofinteresty,5,0);}
+     /*patrol*/              if(alert == 2){moving = true; mp_potential_step(pointofinterestx,pointofinteresty,5,1);}
      /*investigate*/         if(alert == 3){alarm[1] = wtf; moving = true; mp_potential_step(pointofinterestx,pointofinteresty,5,0);if(point_distance(x,y,pointofinterestx,pointofinteresty) &lt; 30){alert = 0;}}
                              
         
