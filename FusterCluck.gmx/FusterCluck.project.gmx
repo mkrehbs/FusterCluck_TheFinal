@@ -40,8 +40,11 @@
       <sprite>sprites\spr_EnemyR</sprite>
       <sprite>sprites\spr_EnemyD</sprite>
       <sprite>sprites\spr_EnemyL</sprite>
-      <sprite>sprites\spr_Camera</sprite>
-      <sprite>sprites\spr_Laser</sprite>
+      <sprite>sprites\spr_DCamera</sprite>
+      <sprite>sprites\spr_RLaser</sprite>
+      <sprite>sprites\spr_UCamera</sprite>
+      <sprite>sprites\spr_LCamera</sprite>
+      <sprite>sprites\spr_RCamera</sprite>
     </sprites>
     <sprites name="Barrier">
       <sprites name="Outside Coop">
