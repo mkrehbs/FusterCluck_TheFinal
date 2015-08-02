@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Colton
-projectile = choose(1)//choose(1,1,1,1,1,2,2,2,2,3);
-throwprojectile = choose(1);
+projectile =choose(1,1,1,1,1,2,2,2,2,3);
+throwprojectile = choose(3,3,3,3,3,2,2,2,1);
 canshoot = true;
 canthrow = true;
 </string>
@@ -126,7 +126,7 @@ y = obj_Player.y;
 
 if(canshoot == true){
 if (mouse_check_button(mb_left)) {
-        with(instance_create(x + lengthdir_x(5,image_angle), y + lengthdir_y(5,image_angle), scr_WhatProj(projectile))) {
+        with(instance_create(x + lengthdir_x(5,image_angle), y + lengthdir_y(5,image_angle), scr_WhatProj(choose(1,2,3)))) {
             motion_add(point_direction(x, y, mouse_x+(random_range(-5,5)), mouse_y+random_range(-5,5)),(10));
             //if(instance_exists(Player)){Player.shake+=random(argument2);}
             
@@ -137,7 +137,7 @@ if (mouse_check_button(mb_left)) {
     
     if(canthrow == true){
 if (mouse_check_button(mb_right)) {
-        with(instance_create(x + lengthdir_x(5,image_angle), y + lengthdir_y(5,image_angle), scr_WhatThrow(throwprojectile))) {
+        with(instance_create(x + lengthdir_x(5,image_angle), y + lengthdir_y(5,image_angle), scr_WhatThrow(choose(1,2,3)))) {
             motion_add(point_direction(x, y, mouse_x+(random_range(-5,5)), mouse_y+random_range(-5,5)),10);
             //if(instance_exists(Player)){Player.shake+=random(argument2);}
             
@@ -189,6 +189,29 @@ if (mouse_check_button(mb_right)) {
           <argument>
             <kind>1</kind>
             <string>///Matt
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="37">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_NewGun();
 </string>
           </argument>
         </arguments>
