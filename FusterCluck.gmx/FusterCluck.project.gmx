@@ -34,6 +34,10 @@
       <sprite>sprites\spr_PlayerD</sprite>
       <sprite>sprites\spr_PlayerSA</sprite>
       <sprite>sprites\spr_PlayerSD</sprite>
+      <sprite>sprites\spr_PlayerDiveDown</sprite>
+      <sprite>sprites\spr_PlayerDiveUp</sprite>
+      <sprite>sprites\spr_PlayerDiveLeft</sprite>
+      <sprite>sprites\spr_PlayerDiveRight</sprite>
     </sprites>
     <sprite>sprites\spr_Gun</sprite>
     <sprite>sprites\spr_Enemy</sprite>
@@ -169,6 +173,8 @@
       <object>objects\obj_fenceRight</object>
       <object>objects\obj_fenceLeft</object>
       <object>objects\obj_fenceMid</object>
+      <object>objects\obj_FenceBottomRight</object>
+      <object>objects\obj_FenceBottomLeft</object>
       <object>objects\obj__wood_front_center_border_top</object>
       <object>objects\obj_wood_front_center_border_right</object>
       <object>objects\obj_wood_front_center_border_left</object>
