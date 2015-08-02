@@ -76,6 +76,8 @@
           <sprite>sprites\spr_new_front_center_border_left</sprite>
           <sprite>sprites\spr_new_wood_front_center_border_right</sprite>
           <sprite>sprites\spr_new_wood_front_center_border_top</sprite>
+          <sprite>sprites\spr_wood_corner_left_border</sprite>
+          <sprite>sprites\spr_wood_corner_right_border</sprite>
         </sprites>
         <sprites name="Fence">
           <sprite>sprites\spr_fenceRightDiag</sprite>
@@ -83,15 +85,26 @@
           <sprite>sprites\spr_fenceLeft</sprite>
           <sprite>sprites\spr_fenceLeftDiag</sprite>
           <sprite>sprites\spr_fenceMid</sprite>
+          <sprite>sprites\spr_fenceBottomLeft</sprite>
+          <sprite>sprites\spr_fenceBottomRight</sprite>
         </sprites>
       </sprites>
     </sprites>
     <sprite>sprites\spr_grass2</sprite>
     <sprite>sprites\sprite35</sprite>
+    <sprites name="Friend">
+      <sprite>sprites\spr_FriendU</sprite>
+      <sprite>sprites\spr_FriendD</sprite>
+      <sprite>sprites\spr_FriendL</sprite>
+      <sprite>sprites\spr_FriendR</sprite>
+    </sprites>
+    <sprite>sprites\spr_HayFloor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Grass</background>
     <background>background\tile_grass2</background>
+    <background>background\tile_wood</background>
+    <background>background\tile_hay</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\Pth_square</path>
@@ -166,6 +179,12 @@
       <object>objects\obj_wood_diag_left</object>
       <object>objects\obj_wood_corner_right</object>
       <object>objects\obj_wood_corner_left</object>
+      <object>objects\obj_wood_corner_right_border</object>
+      <object>objects\obj_wood_corner_left_border</object>
+      <object>objects\obj_new_wood_front_center</object>
+      <object>objects\obj_new_front_center_border_left</object>
+      <object>objects\obj_new_front_center_border_right</object>
+      <object>objects\obj_front_center_border_top</object>
     </objects>
     <object>objects\obj_PatrolPoint</object>
   </objects>
