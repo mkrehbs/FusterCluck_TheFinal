@@ -514,6 +514,7 @@
     <instance objName="obj_longBale" x="1536" y="2400" name="inst_CA179374" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_longBale" x="1568" y="2400" name="inst_A24B8CBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_longBale" x="1632" y="2400" name="inst_E32E5F5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Friend" x="1824" y="2464" name="inst_1C8E5B04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

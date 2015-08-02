@@ -105,6 +105,10 @@
     </sprites>
     <sprite>sprites\spr_HayFloor</sprite>
     <sprite>sprites\sprite74</sprite>
+    <sprite>sprites\spr_BrownChickenUp</sprite>
+    <sprite>sprites\spr_BrownChickenDown</sprite>
+    <sprite>sprites\spr_BrownChickenLeft</sprite>
+    <sprite>sprites\spr_BrownChickenRight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Grass</background>
@@ -195,6 +199,7 @@
       <object>objects\obj_front_center_border_top</object>
     </objects>
     <object>objects\obj_PatrolPoint</object>
+    <object>objects\obj_Friend</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Colton</room>
