@@ -131,7 +131,8 @@ facing = 'N';
             <string>///Colton
 alarm[1] = 30;
 slide = false;
-if (sprite_index != spr_PlayerD) {/*sprite_index = spr_PlayerD;*/}
+//turn dive off
+if (sprite_index != prevSprite) {sprite_index = prevSprite;} 
     
 
 </string>
@@ -222,33 +223,74 @@ if (slide == false) {
             sprite_index = spr_PlayerSD;
     }
        
+//dive and dive animation
+if(alarm[1] &lt; 1){if (keyboard_check(vk_space))
+    {
+        slide = true; 
+        //neutral dive
+        if ((keyboard_check(vk_space)) &amp;&amp; !keyboard_check(ord('W')) &amp;&amp; !keyboard_check(ord('A')) &amp;&amp; !keyboard_check(ord('S')) &amp;&amp; !keyboard_check(ord('D')))
+        {
+            prevSprite = sprite_index;
+            
+            if facing == 'N'
+            {
+                sprite_index = spr_PlayerDiveDown;
+            }
+            
+            if facing == 'W'
+            {
+                sprite_index = spr_PlayerDiveUp;
+            }
+            if facing == 'A'
+            {
+                sprite_index = spr_PlayerDiveLeft;
+            }
+            if facing == 'S'
+            {
+                sprite_index = spr_PlayerDiveDown;
+            }
+            if facing == 'D'
+            {
+                sprite_index = spr_PlayerDiveRight;
+            }
+            
+        }
+        //if ((dir &gt; 45) &amp;&amp; (dir &lt;= 135))
+        if ((keyboard_check(vk_space)) &amp;&amp; keyboard_check(ord('W')))
+        {
+            prevSprite = sprite_index;
+            sprite_index = spr_PlayerDiveUp;
+        }
+        //if ((dir &gt; 135) &amp;&amp; (dir &lt;= 225))
+        if ((keyboard_check(vk_space)) &amp;&amp; keyboard_check(ord('A')))
+        {
+            prevSprite = sprite_index;
+            sprite_index = spr_PlayerDiveLeft;
+        }
+        //if ((dir &gt; 225) &amp;&amp; (dir &lt;= 315))
+        if ((keyboard_check(vk_space)) &amp;&amp; keyboard_check(ord('S')))
+        {
+            prevSprite = sprite_index;
+            sprite_index = spr_PlayerDiveDown;
+        }
+        //if ((315 &lt; dir &lt;= 0) &amp;&amp; (0 &lt; dir &lt;= 45))
+        if ((keyboard_check(vk_space)) &amp;&amp; keyboard_check(ord('D')))
+        {
+            prevSprite = sprite_index;
+            sprite_index = spr_PlayerDiveRight;
+        } 
         
-    if(alarm[1] &lt; 1){if (keyboard_check(vk_space)){slide = true; alarm[0] = 10;}}
+        alarm[0] = 10;
+    }}
 }
 
 if(slide == true){friction = 0.25; maxspeed = 10; speed = 10;}
 else{friction = 0.8; maxspeed = 4;}
 
+//run
 if(keyboard_check(vk_shift) &amp;&amp; slide == false)
     {   
         maxspeed = 6.5;
-        
-        if ((dir &gt; 45) &amp;&amp; (dir &lt;= 135))
-        {
-            //sprite_index = spr_PlayerDiveUp;
-        }
-        if ((dir &gt; 135) &amp;&amp; (dir &lt;= 225))
-        {
-            //sprite_index = spr_PlayerDiveLeft;
-        }
-        if ((dir &gt; 225) &amp;&amp; (dir &lt;= 315))
-        {
-            //sprite_index = spr_PlayerDiveDown;
-        }
-        if ((315 &lt; dir &lt;= 0) &amp;&amp; (0 &lt; dir &lt;= 45))
-        {
-            //sprite_index = spr_PlayerDiveRight;
-        } 
     }
 
 if (speed &gt; maxspeed) {
