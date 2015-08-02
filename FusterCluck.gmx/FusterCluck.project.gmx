@@ -32,7 +32,7 @@
     <sprite>sprites\spr_Gun</sprite>
     <sprite>sprites\spr_Enemy</sprite>
     <sprite>sprites\spr_LOS</sprite>
-    <sprite>sprites\spr_Grass</sprite>
+    <sprite>sprites\spr_grass1</sprite>
     <sprite>sprites\spr_tallBarrier</sprite>
     <sprites name="Enemy">
       <sprite>sprites\spr_EnemyU</sprite>
@@ -42,19 +42,38 @@
     </sprites>
     <sprites name="Barrier">
       <sprites name="Outside Coop">
-        <sprite>sprites\spr_fenceRightDiag</sprite>
-        <sprite>sprites\spr_fenceRight</sprite>
-        <sprite>sprites\spr_fenceLeft</sprite>
-        <sprite>sprites\spr_fenceLeftDiag</sprite>
         <sprite>sprites\spr_Barrier</sprite>
         <sprite>sprites\spr_HaybaleLong</sprite>
         <sprite>sprites\sprite27</sprite>
-        <sprite>sprites\spr_fenceMid</sprite>
+        <sprites name="Coop Exterior">
+          <sprite>sprites\spr_wood_front_center_border_top</sprite>
+          <sprite>sprites\spr_wood_front_center_border_right</sprite>
+          <sprite>sprites\spr_wood_front_center_border_left</sprite>
+          <sprite>sprites\spr_wood_front_center</sprite>
+          <sprite>sprites\spr_wood_diag_right_top</sprite>
+          <sprite>sprites\spr_wood_diag_right_border_right</sprite>
+          <sprite>sprites\spr_wood_diag_right</sprite>
+          <sprite>sprites\spr_wood_diag_left_top</sprite>
+          <sprite>sprites\spr_diag_left_border_left</sprite>
+          <sprite>sprites\spr_wood_diag_left</sprite>
+          <sprite>sprites\spr_wood_corner_right</sprite>
+          <sprite>sprites\spr_wood_corner_left</sprite>
+        </sprites>
+        <sprites name="Fence">
+          <sprite>sprites\spr_fenceRightDiag</sprite>
+          <sprite>sprites\spr_fenceRight</sprite>
+          <sprite>sprites\spr_fenceLeft</sprite>
+          <sprite>sprites\spr_fenceLeftDiag</sprite>
+          <sprite>sprites\spr_fenceMid</sprite>
+        </sprites>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_grass2</sprite>
+    <sprite>sprites\sprite35</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_Grass</background>
+    <background>background\tile_grass2</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\Pth_square</path>
@@ -106,11 +125,23 @@
       <object>objects\obj_fenceRight</object>
       <object>objects\obj_fenceLeft</object>
       <object>objects\obj_fenceMid</object>
+      <object>objects\obj__wood_front_center_border_top</object>
+      <object>objects\obj_wood_front_center_border_right</object>
+      <object>objects\obj_wood_front_center_border_left</object>
+      <object>objects\obj_wood_front_center</object>
+      <object>objects\obj_wood_diag_right_top</object>
+      <object>objects\obj_wood_diag_right_border_right</object>
+      <object>objects\obj_wood_diag_right</object>
+      <object>objects\obj_wood_diag_left_top</object>
+      <object>objects\obj_wood_diag_left_border_left</object>
+      <object>objects\obj_wood_diag_left</object>
+      <object>objects\obj_wood_corner_right</object>
+      <object>objects\obj_wood_corner_left</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Colton</room>
     <room>rooms\room3</room>
+    <room>rooms\Colton</room>
     <room>rooms\rm_LevelOne</room>
     <room>rooms\rm_Init</room>
   </rooms>
