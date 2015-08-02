@@ -101,9 +101,9 @@
     <object>objects\obj_Door</object>
     <object>objects\obj_SecurityCam</object>
     <object>objects\obj_Text</object>
+    <object>objects\obj_tallBarrier</object>
     <object>objects\obj_LaserSensor</object>
     <object>objects\obj_LOS</object>
-    <object>objects\obj_tallBarrier</object>
     <objects name="Projectiles">
       <object>objects\obj_Projectile</object>
       <objects name="Shot">
